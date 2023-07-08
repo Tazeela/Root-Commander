@@ -64,7 +64,7 @@ const ROOT_CRC: Crc<u8> = Crc::<u8>::new(&ROOT_CRC_ALGORITHM);
 // The full format requires that the 20th byte is a calculated checksum.
 // This takes the intended packet, pads it to the correct length,
 // then calculates the CRC and adds it.
-pub fn build_checked_packet(mut packet: Vec<u8>) -> Vec<u8> {
+fn build_checked_packet(mut packet: Vec<u8>) -> Vec<u8> {
     // Assumes the payload is a valid unsigned payload
     assert!(packet.len() < 20);
 
