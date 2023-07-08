@@ -9,7 +9,7 @@ use uuid::{uuid, Uuid};
 
 use futures::stream::StreamExt;
 
-use crate::messagestorage::MessageStorage;
+use crate::utils::MessageStorage;
 
 const ROOT_IDENTIFIER_UUID: Uuid = uuid!("48c5d828-ac2a-442d-97a3-0c9822b04979");
 const ROOT_RX_CHARACTERISTIC: Uuid = uuid!("6e400002-b5a3-f393-e0a9-e50e24dcca9e");
